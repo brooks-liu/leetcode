@@ -1,4 +1,4 @@
-# beats 71.57% of solutions
+# beats 98.86% of solutions
 
 # solution 1--------------------------------------------------------------
 
@@ -86,4 +86,21 @@ class Solution(object):
                     return prefix.join(ans)
             ans.append(letter)
         return prefix.join(ans)
-        
+
+# solution 4--------------------------------------------------------------
+# can avoid checking every single one by sorting and 
+class Solution(object):
+    def longestCommonPrefix(self, strs):
+        """
+        :type strs: List[str]
+        :rtype: str
+        """
+        prefix=""
+        strs = sorted(strs)
+        first = strs[0]
+        last = strs[-1]
+        for i in range(min(len(first), len(last))):
+            if first[i] != last[i]:
+                return prefix
+            prefix += first[i]
+        return prefix 
