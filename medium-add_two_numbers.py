@@ -1,4 +1,4 @@
-# beats 91.34% of solutions
+# solution 2 beats 91.34% of solutions
 
 #Definition for singly-linked list.
 class ListNode(object):
