@@ -39,3 +39,51 @@ class Solution(object):
         return prefix
     
 # solution 2--------------------------------------------------------------
+class Solution(object):
+    def longestCommonPrefix(self, strs):
+        """
+        :type strs: List[str]
+        :rtype: str
+        """
+        longest = 0
+        index = 0
+        ans = []
+        prefix = ""
+        for i in range(len(strs)):
+            if len(strs[i]) > longest:
+                longest = len(strs[i])
+                index = i
+        if longest == 0:
+            return prefix
+        for i in range(longest):
+            letter = strs[index][i]
+            for string in strs:
+                try:
+                    if string[i] != letter:
+                        return prefix.join(ans)
+                except:
+                    return prefix.join(ans)
+            ans.append(letter)
+        return prefix.join(ans)
+    
+# solution 3--------------------------------------------------------------
+# cut out the iteration bc i realized it must match every single word (so it applied to the first word)
+class Solution(object):
+    def longestCommonPrefix(self, strs):
+        """
+        :type strs: List[str]
+        :rtype: str
+        """
+        prefix = ""
+        ans = []
+        for i in range(len(strs[0])):
+            letter = strs[0][i]
+            for string in strs:
+                try:
+                    if string[i] != letter:
+                        return prefix.join(ans)
+                except:
+                    return prefix.join(ans)
+            ans.append(letter)
+        return prefix.join(ans)
+        
