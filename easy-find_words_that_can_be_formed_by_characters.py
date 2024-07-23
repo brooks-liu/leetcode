@@ -1,4 +1,4 @@
-# beats 85.93% of solutions
+# beats 96.64% of solutions
 
 # solution 1--------------------------------------------------
 class Solution(object):
@@ -62,4 +62,34 @@ if __name__ == "__main__":
     chars = "atach"
     solution = Solution()
     print(solution.countCharacters(test, chars))
+        
+#solution 3-----------------------------------------------------------------
+
+class Solution(object):
+    def countCharacters(self, words, chars):
+        """
+        :type words: List[str]
+        :type chars: str
+        :rtype: int
+        """
+        letters = [0] * 26
+        score = 0
+        for letter in chars:
+            letters[ord(letter) - ord('a')] += 1
+        for word in words:
+            if self.canForm(word, letters):
+                score += len(word)
+        return score
+    
+    def canForm(self, word, letters):
+        needed = [0] * 26
+
+        for letter in word:
+            index = ord(letter) - ord('a')
+            needed[index] += 1
+            if needed[index] > letters[index]:
+                return False
+        return True
+
+
         
