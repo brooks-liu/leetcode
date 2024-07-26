@@ -1,4 +1,4 @@
-# beats 73.91% of solutions
+# beats 84.49% of solutions
 
 # Definition for singly-linked list.
 class ListNode(object):
