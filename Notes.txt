@@ -5,6 +5,8 @@ Linked Lists:
     you can just point your curr to the node of the already created list, and continue like that. At the end, you can return head.next to 
     get the actual start of the list (like problem 21 solution).
     
+Binary Search:
+    Implementation isn't hard just walk through an example specific to the case.
 
 
 General:
