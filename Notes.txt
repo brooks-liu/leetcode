@@ -1,4 +1,4 @@
-Notes doc, for all things I find interesting/important about solutions and problems!
+Notes doc, for all things I find interesting/important about solutions and problems! ONLY FOR LEETCODE (probably)
 
 Linked Lists:
     While using linked lists, you can often create one head and a current linked list, and instead of putting in a value into a list,
@@ -12,3 +12,9 @@ Binary Search:
 General:
     Go through simple examples!
     Don't get scared of time complexity, make a solution and improve on it.
+
+
+Things to learn/review in the future:
+    Space complexity stuff (auxiliary space?)
+    All graph questions (but should be better at it when I'm making the game)
+    
