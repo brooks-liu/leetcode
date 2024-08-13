@@ -8,6 +8,8 @@ Linked Lists:
 Binary Search:
     Implementation isn't hard just walk through an example specific to the case.
 
+Cycle Sort:
+    Sorts in place and takes up O(1) auxiliary space, just swap items in place
 
 General:
     Go through simple examples!
